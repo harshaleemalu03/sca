@@ -81,7 +81,10 @@ const Dashboard = () => {
         <div>
           <h1 className="text-3xl font-bold text-foreground">AI Detection Dashboard</h1>
           <p className="text-muted-foreground mt-2">
-            Upload CCTV footage to detect energy-saving actions and earn rewards
+            Upload CCTV footage to detect energy-saving actions and earn blockchain-verified credits
+          </p>
+          <p className="text-sm text-muted-foreground mt-1">
+            Detecting: Lights OFF, Fans OFF, AC OFF, PC Shutdown, Door Closing
           </p>
         </div>
 

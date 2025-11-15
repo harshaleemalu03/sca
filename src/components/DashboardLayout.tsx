@@ -27,7 +27,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
             <div className="w-10 h-10 rounded-lg bg-gradient-eco flex items-center justify-center">
               <Video className="w-6 h-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold text-foreground">EcoWatch Campus</span>
+            <span className="text-xl font-bold text-foreground">SCA</span>
           </Link>
         </div>
       </header>

@@ -75,7 +75,7 @@ const DetectionViewer = ({ results }: DetectionViewerProps) => {
                     <Coins className="w-5 h-5" />
                     +{detection.pointsAwarded}
                   </div>
-                  <div className="text-xs text-muted-foreground">Points</div>
+                  <div className="text-xs text-muted-foreground">Energy Credits</div>
                 </div>
               </div>
             </div>
