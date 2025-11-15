@@ -1,34 +1,41 @@
 import { Card } from "@/components/ui/card";
 import { TrendingUp, Zap, Award, Users } from "lucide-react";
 
-const StatsCards = () => {
+interface StatsCardsProps {
+  totalActions: number;
+  totalCredits: number;
+  averageConfidence: number;
+  uniqueLocations: number;
+}
+
+const StatsCards = ({ totalActions, totalCredits, averageConfidence, uniqueLocations }: StatsCardsProps) => {
   const stats = [
     {
       label: "Total Actions Detected",
-      value: "1,234",
-      change: "+12.5%",
+      value: totalActions.toString(),
+      change: totalActions > 0 ? "+100%" : "0%",
       icon: Zap,
       color: "text-primary",
     },
     {
-      label: "Points Awarded",
-      value: "12,450",
-      change: "+18.2%",
+      label: "Energy Credits Awarded",
+      value: totalCredits.toLocaleString(),
+      change: totalCredits > 0 ? "+100%" : "0%",
       icon: Award,
       color: "text-success",
     },
     {
-      label: "Active Users",
-      value: "342",
-      change: "+8.4%",
-      icon: Users,
+      label: "Detection Accuracy",
+      value: `${averageConfidence}%`,
+      change: averageConfidence >= 90 ? "Excellent" : "Good",
+      icon: TrendingUp,
       color: "text-accent",
     },
     {
-      label: "Campus Impact",
-      value: "95%",
-      change: "+5.1%",
-      icon: TrendingUp,
+      label: "Campus Locations",
+      value: uniqueLocations.toString(),
+      change: uniqueLocations > 0 ? "Active" : "Inactive",
+      icon: Users,
       color: "text-primary",
     },
   ];
